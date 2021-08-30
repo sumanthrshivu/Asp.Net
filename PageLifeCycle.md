@@ -42,24 +42,24 @@ namespace PageLifeCycle
         protected void Page_Init(object sender, EventArgs e)
         {
             //Work and It will assign the values to label.  
-            Label2.Text = Label2.Text + "<br/>" + "Init";
+            Label1.Text = Label1.Text + "<br/>" + "Init";
         }
         protected void Page_InitComplete(object sender, EventArgs e)
         {
             //Work and It will assign the values to label.  
-            Label3.Text = Label3.Text + "<br/>" + "InitComplete";
+            Label1.Text = Label1.Text + "<br/>" + "InitComplete";
         }
         protected override void OnPreLoad(EventArgs e)
         {
             //Work and It will assign the values to label.  
             //If the page is post back, then label contrl values will be loaded from view state.  
             //E.g: If you string str = lblName.Text, then str will contain viewstate values.  
-            Label4.Text = Label4.Text + "<br/>" + "PreLoad";
+            Label1.Text = Label1.Text + "<br/>" + "PreLoad";
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             //Work and It will assign the values to label.  
-            Label5.Text = Label5.Text + "<br/>" + "Load";
+            Label1.Text = Label1.Text + "<br/>" + "Load";
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -69,23 +69,23 @@ namespace PageLifeCycle
         protected void Page_LoadComplete(object sender, EventArgs e)
         {
             //Work and It will assign the values to label.  
-            Label7.Text = Label7.Text + "<br/>" + "LoadComplete";
+            Label1.Text = Label1.Text + "<br/>" + "LoadComplete";
         }
         protected override void OnPreRender(EventArgs e)
         {
             //Work and It will assign the values to label.  
-            Label8.Text = Label8.Text + "<br/>" + "PreRender";
+            Label1.Text = Label1.Text + "<br/>" + "PreRender";
         }
         protected override void OnSaveStateComplete(EventArgs e)
         {
             //Work and It will assign the values to label.  
             //But "SaveStateComplete" values will not be available during post back. i.e. View state.  
-            Label9.Text = Label9.Text + "<br/>" + "SaveStateComplete";
+            Label1.Text = Label1.Text + "<br/>" + "SaveStateComplete";
         }
         protected void Page_UnLoad(object sender, EventArgs e)
         {
             //Work and it will not effect label contrl, view stae and post back data.  
-            Label10.Text = Label10.Text + "<br/>" + "UnLoad";
+            Label1.Text = Label1.Text + "<br/>" + "UnLoad";
         }
     }
 }                                                                                                                                   
