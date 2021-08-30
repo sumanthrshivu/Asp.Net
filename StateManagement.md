@@ -52,7 +52,7 @@ namespace ViewState_Demo
             {
                 if (ViewState["clicks"] == null)
                 {
-                    Session["clicks"] = "0";
+                    ViewState["clicks"] = "0";
                 }
                 TextBox1.Text = ViewState["clicks"].ToString();
             }
