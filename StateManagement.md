@@ -266,8 +266,9 @@ namespace Session_Demo
 ```    
   **c**, **SQLServer** : mode stores session state in a SQL Server database. This ensures that session state is preserved 
           if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm(web application deployed on multiple server).<br />
-  ---        
- ### Application State** : 
+ 
+ ---
+ ### Application State : 
  * which stores variables that can be accessed by all users of an ASP.NET application.
  * Multi-user global data.<br />
       **Example : WebForm1.aspx**
