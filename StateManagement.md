@@ -212,7 +212,7 @@ namespace Cookies
  # Server-Side StateManagement
  ### Session State :
  * Enables you to store and retrieve values for a user as the user navigates ASP.NET pages in a Web application.<br />
- * Single-user global data.
+ * Single-user global data.<br />
   **a**, **InProc mode:** which stores session state in memory on the Web server. This is the default.<br />
    **Example : WebForm1.aspx**
 ```C#
