@@ -13,7 +13,7 @@ It is very important to manage state in any web application. There are two types
  
  # Client-Side StateManagement
  ### Viewstate : 
- * It is the method that the ASP.NET page framework uses to preserve page and control values between round trips(requests).
+ * It is the method that the ASP.NET page framework uses to preserve page and control values between requests.
  * ViewState data is serialized into base64-encoded strings, and is stored in Hidden input fields.<br />
 
  **Example : WebForm1.aspx**
