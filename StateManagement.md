@@ -296,7 +296,7 @@ namespace ApplicationState_Demo
         {
             if (!IsPostBack)
             {
-                if (ApplicationState["clicks"] == null)
+                if (Application["clicks"] == null)
                 {
                     Application["clicks"] = "0";
                 }
@@ -307,9 +307,9 @@ namespace ApplicationState_Demo
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            int clicks_Count = Convert.ToInt32(ApplicationState["clicks"]) + 1;
+            int clicks_Count = Convert.ToInt32(Application["clicks"]) + 1;
             TextBox1.Text = clicks_Count.ToString();
-            ApplicationState["clicks"] = TextBox1.Text;
+            Application["clicks"] = TextBox1.Text;
         }
     }
 }
