@@ -46,23 +46,24 @@ namespace ViewState_Demo
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        int clicks_Count = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                TextBox1.Text = "0";
+                if (ViewState["clicks"] == null)
+                {
+                    Session["clicks"] = "0";
+                }
+                TextBox1.Text = ViewState["clicks"].ToString();
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (ViewState["click"] != null)
-            {
-                clicks_Count = Convert.ToInt32(ViewState["click"]) + 1;
-            }
+
+            int clicks_Count = Convert.ToInt32(ViewState["clicks"]) + 1;
             TextBox1.Text = clicks_Count.ToString();
-            ViewState["click"] = TextBox1.Text;
+            ViewState["clicks"] = TextBox1.Text;
         }
     }
 }
@@ -209,7 +210,9 @@ namespace Cookies
 ```  
  ---
  # Server-Side StateManagement
- * **Session State** : Enables you to store and retrieve values for a user as the user navigates ASP.NET pages in a Web application.<br />
+ ### Session State :
+ * Enables you to store and retrieve values for a user as the user navigates ASP.NET pages in a Web application.<br />
+ * Single-user global data.
   **a**, **InProc mode:** which stores session state in memory on the Web server. This is the default.<br />
    **Example : WebForm1.aspx**
 ```C#
@@ -218,26 +221,41 @@ namespace Cookies
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
     </form>
-    protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-            Session["name"] = TextBox1.Text;
-            Response.Redirect("page2.aspx");
-        }
  ```       
-  **WebForm2.aspx**
+  **WebForm1.aspx.cs**
 ```C#
- <form id="form1" runat="server">
-          Name:  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    </form>
-    
-    protected void Page_Load(object sender, EventArgs e)
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Session_Demo
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["name"] != null)
+            if (!IsPostBack)
             {
-                Label1.Text = Session["name"].ToString();
+                if (Session["clicks"] == null)
+                {
+                    Session["clicks"] = "0";
+                }
+                TextBox1.Text = Session["clicks"].ToString();
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            int clicks_Count = Convert.ToInt32(Session["clicks"]) + 1;
+            TextBox1.Text = clicks_Count.ToString();
+            Session["clicks"] = TextBox1.Text;
+        }
+    }
+}
  ```      
   **b**, **StateServer mode:** which stores session state in a separate process called the ASP.NET state service. 
           This ensures that session state is preserved if the Web application is restarted and also makes session
@@ -248,5 +266,50 @@ namespace Cookies
 ```    
   **c**, **SQLServer** : mode stores session state in a SQL Server database. This ensures that session state is preserved 
           if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm(web application deployed on multiple server).<br />
- * **Application State** : which stores variables that can be accessed by all users of an ASP.NET application.
-   
+  ---        
+ ### Application State** : 
+ * which stores variables that can be accessed by all users of an ASP.NET application.
+ * Multi-user global data.<br />
+      **Example : WebForm1.aspx**
+```C#
+  <form id="form1" runat="server">
+       
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    </form>
+ ```       
+  **WebForm1.aspx.cs
+```C#
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace ApplicationState_Demo
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (ApplicationState["clicks"] == null)
+                {
+                    Application["clicks"] = "0";
+                }
+                TextBox1.Text = Application["clicks"].ToString();
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            int clicks_Count = Convert.ToInt32(ApplicationState["clicks"]) + 1;
+            TextBox1.Text = clicks_Count.ToString();
+            ApplicationState["clicks"] = TextBox1.Text;
+        }
+    }
+}
+ ```      
