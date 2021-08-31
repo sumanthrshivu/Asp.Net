@@ -2,11 +2,6 @@
 
 Validation is important part of any web application. User's input must always be validated before sending across different layers of the application.
 
-
-## Validation is of two types:<br/>
- 1. Client Side
-2. Serve Side<br/>
-
 ### Client Side Control :
 * Client side validation is good but we have to be dependent on browser and scripting language support.
 * Client side validation is considered convenient for users as they get instant feedback.
