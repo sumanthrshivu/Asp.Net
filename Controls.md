@@ -90,7 +90,7 @@ Validation is important part of any web application. User's input must always be
                 <br />
                 <br />
             </div>
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" runat="server" Text="Submit" />
         </div>
     </form>
 </body>
@@ -112,7 +112,8 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+            RangeValidator1.MinimumValue = DateTime.Now.AddYears(-45).ToShortDateString();
+            RangeValidator1.MaximumValue = DateTime.Now.AddYears(-10).ToShortDateString();
         }
 
       
@@ -142,13 +143,6 @@ namespace WebApplication1
             {
                 args.IsValid = false;
             }
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            RangeValidator1.MinimumValue = DateTime.Now.AddYears(-45).ToShortDateString();
-            RangeValidator1.MaximumValue = DateTime.Now.AddYears(-10).ToShortDateString();
-
         }
     }
 }
