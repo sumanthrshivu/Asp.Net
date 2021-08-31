@@ -13,7 +13,7 @@
 View state should be used when the user needs to store a small amount of data at the client browser with faster retrieval. The developer should not use this technique to retain state with larger data since it will create a performance overhead for the webpage. It should be used for sending data from one page to another. Not very secure to store sensitive information.
  
  ### SessionState
- In Proc mode is best suited for the application that is hosted on a single server and mid size use base or the session variable used is not big, to avoid data loss and scalability issues. When there is a requirement for a web farm  or web garden deployments the “out of process “modes like state server or SQL Server modes are the best option.
+ In Proc mode is best suited for the application that is hosted on a single server and  the session variable used is not big, to avoid data loss and scalability issues. When there is a requirement for a web farm  or web garden deployments the “out of process “modes like state server or SQL Server modes are the best option.
  
  ### ApplicationState
  An application variable is used only when the variable needs to have global access and when you need them for the entire time,during the lifetime of an application.
