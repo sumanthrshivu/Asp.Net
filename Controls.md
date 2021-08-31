@@ -6,7 +6,6 @@ Validation is important part of any web application. User's input must always be
 * Client side validation is good but we have to be dependent on browser and scripting language support.
 * Client side validation is considered convenient for users as they get instant feedback.
 * The main advantage is that it prevents a page from being postback to the server until the client validation is executed successfully.
-* For developer point of view serve side is preferable because it will not fail, it is not dependent on browser and scripting language.
 * We can use ASP.NET validation, which will ensure client, and server validation. It work on both end; 
   first it will work on client validation and than on server validation. At any cost server validation will work always whether client validation is executed or not.
  So we have a safety of validation check.
