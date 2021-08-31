@@ -52,7 +52,7 @@ Validation is important part of any web application. User's input must always be
                 <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="TextBox2" Display="Dynamic" 
-                ErrorMessage="Password must contain 5 letters" ForeColor="Black" OnServerValidate="CustomValidator1_ServerValidate"
+                ErrorMessage="Password must contain 5 letters" OnServerValidate="CustomValidator1_ServerValidate"
                 SetFocusOnError="True" ValidateEmptyText="True">Invalid Password</asp:CustomValidator>
                 <br />
             </div>
@@ -60,17 +60,16 @@ Validation is important part of any web application. User's input must always be
                 <asp:Label ID="Label3" runat="server" Text="Confirm Password"></asp:Label>
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBox3" Display="Dynamic" 
-                ErrorMessage="password and confirm password
-                is not same" ForeColor="Black" SetFocusOnError="True" ControlToCompare="TextBox2">Password Mismatched</asp:CompareValidator>
-                <br />
+                ErrorMessage="password and confirm password is not same" ForeColor="Black" SetFocusOnError="True"
+                ControlToCompare="TextBox2">Password Mismatched</asp:CompareValidator>
                 <br />
             </div>
             <div>
                 <asp:Label ID="Label4" runat="server" Text="Email"></asp:Label>
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-                ErrorMessage="Email id is incorrect" ControlToValidate="TextBox4"Display="Dynamic" ForeColor="Black" SetFocusOnError="True" 
-                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid EmailId
+                ErrorMessage="Email id is incorrect" ControlToValidate="TextBox4"Display="Dynamic" ForeColor="Black"
+                SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid EmailId
                 </asp:RegularExpressionValidator>
                 <br />
             </div>
@@ -78,7 +77,8 @@ Validation is important part of any web application. User's input must always be
                 <asp:Label ID="Label5" runat="server" Text="Mobile Number"></asp:Label>
                 <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="TextBox5" 
-                ErrorMessage="enter correct number" OnServerValidate="CustomValidator2_ServerValidate">enter correct number</asp:CustomValidator>
+                ErrorMessage="enter correct number" OnServerValidate="CustomValidator2_ServerValidate">enter correct number
+                </asp:CustomValidator>
                 <br />
             </div>
             <div>
