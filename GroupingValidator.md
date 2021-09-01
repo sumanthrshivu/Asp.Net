@@ -1,5 +1,8 @@
  # Gruping validation in Asp.Net
  
+ * Validation groups allow you to assign validation controls on a page to a specific category.
+ * All the server controls having the same ValidationGroup value act as one validation group.
+ 
  ```C#
  <form id="form1" runat="server">
         <div>
