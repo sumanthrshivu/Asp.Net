@@ -23,7 +23,7 @@ To cache an entire page's output we need to specify a directive at the top of ou
 
 ### Fragment Caching 
 * Fragment caching is used to store Fragment portion of output of a specific web page in the cache memory.<br/>
-* 
+ 
 **WebForm1.aspx**
 
 ```C#
