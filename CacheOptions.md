@@ -84,6 +84,10 @@ namespace CacheOptions
     }
 }
 
+```
+
+## Data Caching
+ Data caching means caching data from a data source. As long as the cache is not expired, a request for the data will be fulfilled from the cache. When the cache is expired, fresh data is obtained by the data source and the cache is refilled.
       
    
  
