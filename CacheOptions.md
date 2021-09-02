@@ -6,7 +6,7 @@
 
 Types of Caching:
    1) Output Caching
-   2) Fragment Caching
+   2) Object Caching
    3) Data Caching <br/>
     
 ## Output Caching
@@ -21,8 +21,11 @@ To cache an entire page's output we need to specify a directive at the top of ou
 **VarByParam Attribute:**
 * This is the most important attributes; you can't afford to miss that in the OutputCache directory statement. It generally defines the query string parameters to vary the cache (in memory).
 
-### Fragment Caching 
-* Fragment caching is used to store Fragment portion of output of a specific web page in the cache memory.<br/>
+### Object Caching 
+* Object caching provides more flexibility than other cache techniques. 
+* You can use object caching to place any object in the cache. 
+* The object can be of any type - a data type, a web control, a class, a dataset object, etc.
+* The item is added to the cache simply by assigning a new key name.
  
 **WebForm1.aspx**
 
