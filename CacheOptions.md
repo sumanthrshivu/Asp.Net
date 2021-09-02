@@ -21,9 +21,9 @@ To cache an entire page's output we need to specify a directive at the top of ou
 **VarByParam Attribute:**
 * This is the most important attributes; you can't afford to miss that in the OutputCache directory statement. It generally defines the query string parameters to vary the cache (in memory).
 
-### Object Caching 
-* Object caching provides more flexibility than other cache techniques. 
+## Object Caching 
 * You can use object caching to place any object in the cache. 
+* The cached data is stored in server memory. 
 * The object can be of any type - a data type, a web control, a class, a dataset object, etc.
 * The item is added to the cache simply by assigning a new key name.
  
