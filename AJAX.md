@@ -25,3 +25,25 @@
 *  Refreshing a specific part of a Web page is referred as partial-page update. <br/>
 *  You can also add one or more UpdatePanel control in the Web page. <br/>
 * The UpdatePanel control uses the AJAX library to support the partial-page rendering. <br/>
+
+ **WebForm1.aspx**
+```C#
+    <form id="form1" runat="server">
+         <div>
+           <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+              <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
+              <asp:Label ID="Label1" runat="server" ></asp:Label>  
+            </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+    </form>
+```
+**WebForm1.aspx.cs**
+```C#
+    protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Label1.Text = DateTime.Now.ToLongTimeString();
+        }
+```        
