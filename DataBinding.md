@@ -1,38 +1,38 @@
-# DATA BOUND CONTROLS
-     Data binding is the process of connecting the Application User Interface with the Business Data. 
-- Shows the data in a particular format
-- Can use various data sources to show the data
-- Data is bound to data controls at runtime
-
+# Data Binding  in Asp.Net 
+* Data binding is the process of retrieving data from a source and dynamically associating it to a property of a visual element
+## Simple Data Binding
+* Simple data binding involves the read-only selection lists. These controls can bind to an array list or fields from a database.
+* Selection lists takes two values from the database or the data source; one value is displayed by the list and the other is considered as the value corresponding to the display.
 ### List of controls
-1) Gridview
+1) ListView
 2) DetailsView
-3) FormView
-4) ListView
+3) Gridview
+4) FormView
 5) DataPager
 6) Repeater
 
-## 1) Gridview
+## 1) ListView
+   * Listview enables to bind to data items that are returned from a data source and display.
+   * The items can be displayed individually or as a group.
+   * User can edit insert and delete data using listview.
+
+## 2) DetailsView   
+   
+   * detailsview will show data in row wise row will contain a field after that we can find details .
+   * DetailsView displays first record from the table.
+   * The DetailsView control also, enables you to select, sort, and edit these items.
+   * DetailsView is a control in asp.net, displays the values of a data source( sql server database) in a tabular format.
+
+## 3) Gridview
    * Gridview is a control in asp.net, displays the values of a data source( sql server database) in a tabular format.
    * GridView shows multiple records at once .
    * Each column represents  a field and each row represents a record. 
    * The GridView control also, enables you to select, sort, and edit these items.
-   
-## 2) DetailsView   
-   * DetailsView is a control in asp.net, displays the values of a data source( sql server database) in a tabular format.
-   * detailsview will show data in row wise row will contain a field after that we can find details .
-   * DetailsView displays first record from the table.
-   * The DetailsView control also, enables you to select, sort, and edit these items.
 
-## 3) FormView
+## 4) FormView
    * The FormView control is used to display a single record at a time from a data source.
    * It will not show data in tabular format.
    * selecting editing and deleting data can be done using formview .
-
-## 4) ListView
-   * Listview enables to bind to data items that are returned from a data source and display.
-   * The items can be displayed individually or as a group.
-   * User can edit insert and delete data using listview.
 
 ## 5) DataPager
    * DataPager Allows paging through data in listview control.
