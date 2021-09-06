@@ -44,12 +44,13 @@
    * The FormView control is used to display a single record at a time from a data source.
    * It will not show data in tabular format.
    * selecting editing and deleting data can be done using formview .
+## 6) Repeater
+   * The Repeater control is used to display a repeated list of items that are bound to the control. 
+   * The Repeater control may be bound to a database table, an XML file, or another list of items.
 
 ## 5) DataPager
    * DataPager Allows paging through data in listview control.
    * Data pager can be put inside or outside of listview control.
 
-## 6) Repeater
-   * The Repeater control is used to display a repeated list of items that are bound to the control. 
-   * The Repeater control may be bound to a database table, an XML file, or another list of items.
+
      
