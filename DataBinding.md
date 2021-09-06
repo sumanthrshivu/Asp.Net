@@ -12,7 +12,8 @@
 * DropDownList
 * ListBox
 * RadioButtonList
-
+##  Declarative Data Binding.
+* controls can bind records, lists, or columns of data into their structure through a DataSource control. These controls derive from the BaseDataBoundControl class. This is called declarative data binding.
 ### List of controls in Declarative Data Binding
 1) ListView
 2) DetailsView
