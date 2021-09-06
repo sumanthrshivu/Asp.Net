@@ -1,5 +1,5 @@
 # Data Binding  in Asp.Net 
-* Data binding is the process of retrieving data from a source and dynamically associating it to a property of a visual element
+* Data binding is the process of retrieving data from a source and dynamically associating it to a property of a visual element.<br/>
 **there are two types of data binding**
 * Simple Data Binding
 * Declarative Data Binding.
