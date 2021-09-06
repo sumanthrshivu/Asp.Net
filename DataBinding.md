@@ -1,9 +1,9 @@
 # Data Binding  in Asp.Net 
 * Data binding is the process of retrieving data from a source and dynamically associating it to a property of a visual element.<br/>
-**there are two types of data binding**
+## There are two types of data binding
 * Simple Data Binding
 * Declarative Data Binding.
-## Simple Data Binding
+### Simple Data Binding
 * Simple data binding involves the read-only selection lists. These controls can bind to an array list or fields from a database.
 * Selection lists takes two values from the database or the data source; one value is displayed by the list and the other is considered as the value corresponding to the display.
 ### The controls capable of simple data binding are derived from the ListControl abstract class and these controls are:
@@ -13,7 +13,7 @@
 * ListBox
 * RadioButtonList
 
-### List of Data Bound controls
+### List of controls in Declarative Data Binding
 1) ListView
 2) DetailsView
 3) Gridview
